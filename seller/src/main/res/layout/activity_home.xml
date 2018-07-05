@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".ImageUploadActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:background="@drawable/item_bg" >
+
+        <TextView
+            style="@style/title_font"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/mila_shanghu" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/last_order"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_margin"
+                android:background="@drawable/bg_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/content_padding"
+                android:paddingTop="@dimen/content_padding_top" >
+
+                <TextView
+                    android:id="@+id/order_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_title"
+                    android:gravity="center"
+                    android:text="最新订单 (5)"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/last_order_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/content_padding"
+                    android:paddingRight="@dimen/content_padding"
+                    android:paddingTop="@dimen/content_padding" >
+
+                    <TextView
+                        android:id="@+id/order_no_title"
+                        style="@style/content_font"
+                        android:text="订单:" />
+
+                    <TextView
+                        android:id="@+id/order_no"
+                        style="@style/content_font"
+                        android:text="KS2010313" />
+
+                    <TextView
+                        android:id="@+id/comma1"
+                        style="@style/content_font"
+                        android:paddingLeft="10dp"
+                        android:text="," />
+
+                    <TextView
+                        android:id="@+id/order_time_title"
+                        style="@style/content_font"
+                        android:paddingLeft="10dp"
+                        android:text="下单时间" />
+
+                    <TextView
+                        android:id="@+id/order_time"
+                        style="@style/content_font"
+                        android:text="12:00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/last_order_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/content_padding"
+                    android:paddingRight="@dimen/content_padding" >
+
+                    <TextView
+                        style="@style/content_font"
+                        android:text="商品:" />
+
+                    <TextView
+                        android:id="@+id/product"
+                        style="@style/content_font"
+                        android:text="麦当劳XXXXX套餐" />
+
+                    <TextView
+                        style="@style/content_font"
+                        android:layout_below="@id/order_title"
+                        android:layout_toRightOf="@id/order_no"
+                        android:paddingLeft="10dp"
+                        android:text="," />
+
+                    <TextView
+                        android:id="@+id/count"
+                        style="@style/content_font"
+                        android:layout_below="@id/order_title"
+                        android:layout_toRightOf="@id/comma1"
+                        android:paddingLeft="10dp"
+                        android:text="1" />
+
+                    <TextView
+                        style="@style/content_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_title"
+                        android:layout_toRightOf="@id/order_no"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="," />
+
+                    <TextView
+                        android:id="@+id/price"
+                        style="@style/content_font"
+                        android:layout_below="@id/order_title"
+                        android:layout_toRightOf="@id/order_time_title"
+                        android:text="RMB20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/content_padding"
+                    android:paddingRight="@dimen/content_padding" >
+
+                    <TextView
+                        style="@style/content_font"
+                        android:text="网上支付,已支付,社商配送" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/content_padding"
+                    android:paddingLeft="@dimen/content_padding"
+                    android:paddingRight="@dimen/content_padding" >
+
+                    <TextView
+                        style="@style/content_font"
+                        android:text="收货人:" />
+
+                    <TextView
+                        android:id="@+id/consignee"
+                        style="@style/content_font"
+                        android:text="刘安" />
+
+                    <TextView
+                        style="@style/content_font"
+                        android:layout_below="@id/order_title"
+                        android:layout_toRightOf="@id/order_no"
+                        android:paddingLeft="10dp"
+                        android:text="," />
+
+                    <TextView
+                        style="@style/content_font"
+                        android:layout_below="@id/order_title"
+                        android:paddingLeft="10dp"
+                        android:text="地址:" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        style="@style/content_font"
+                        android:layout_below="@id/order_title"
+                        android:layout_toRightOf="@id/order_time_title"
+                        android:text="米拉小镇1-1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_margin"
+                android:background="@drawable/bg_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/content_padding"
+                android:paddingTop="@dimen/content_padding_top" >
+
+                <TextView
+                    style="@style/content_font"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_title"
+                    android:text="最新消息"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/message"
+                    style="@style/content_font"
+                    android:layout_marginLeft="@dimen/content_margin"
+                    android:layout_marginRight="@dimen/content_margin"
+                    android:layout_marginTop="@dimen/content_margin"
+                    android:text="12:10 买家 [李东生] : 订一份巨无霸" />
+
+                <Button
+                    android:id="@+id/reply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="@dimen/content_margin"
+                    android:layout_marginLeft="@dimen/content_margin"
+                    android:layout_marginRight="@dimen/content_margin"
+                    android:background="@drawable/bg_btn1"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="回复"
+                    android:textColor="#8B4726"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_margin"
+                android:background="@drawable/bg_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/content_padding_top" >
+
+                <TextView
+                    style="@style/content_font"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_title"
+                    android:text="最近用户"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp" >
+
+                    <com.abt.seller.views.MeasuredHorizontalListView
+                        android:id="@+id/listview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

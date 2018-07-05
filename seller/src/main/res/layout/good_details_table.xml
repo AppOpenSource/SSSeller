@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/bg_content"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+
+        <TableRow>
+            <TextView
+                style="@style/table_font"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:text="编号:" />
+
+            <EditText
+                android:id="@+id/product_detail_num"
+                style="@style/goods_details_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="2"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:text="库存:" />
+
+            <EditText
+                android:id="@+id/product_repertory_num"
+                style="@style/table_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:text="" />
+        </TableRow>
+
+        <TableRow android:background="#eeeeee"
+            android:visibility="gone" >
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="0.5"
+                android:background="#eeeeee"
+                android:text="品牌:" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="2"
+                android:layout_marginRight="30dp"
+                android:background="#eeeeee"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/product_detail_brand"
+                    style="@style/table_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="#eeeeee"
+                android:text="分类:" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="2"
+                android:visibility="gone"
+                android:background="#eeeeee"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/product_detail_cata"
+                    style="@style/table_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    android:text="" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:visibility="gone" >
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="0.5"
+                android:text="品名:" />
+
+            <EditText
+                android:id="@+id/product_name"
+                style="@style/table_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:text="" />
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:text="型号:" />
+
+            <EditText
+                android:id="@+id/product_detail_seriel"
+                style="@style/table_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:visibility="gone"                
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:text="" />
+        </TableRow>
+        
+        <TableRow>
+            <TextView
+                style="@style/table_font"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:text="品名:" />
+
+            <EditText
+                android:id="@+id/product_detail_name"
+                style="@style/goods_details_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:text="库存:" />
+
+            <EditText
+                android:id="@+id/product_repertory_num"
+                style="@style/table_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:text="" />
+        </TableRow>
+
+        <TableRow android:background="#eeeeee" android:visibility="gone" >
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="#eeeeee"
+                android:text="原价:" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="2"
+                android:background="#eeeeee"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/product_detail_price_original"
+                    style="@style/table_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:inputType="number"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="#eeeeee"
+                android:text="商家:" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="2"
+                android:background="#eeeeee"
+                android:gravity="center" >
+
+                <EditText
+                    android:id="@+id/product_detail_supplier"
+                    style="@style/table_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="1dp"
+                    android:text="" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/table_font"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="2dp"
+                android:text="单价:" />
+
+            <EditText
+                android:id="@+id/product_detail_price"
+                style="@style/goods_details_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2.5"
+                android:inputType="numberDecimal"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="0.5"
+                android:text="元" />
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:visibility="invisible"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:text="" />
+        </TableRow>
+        
+        <TableRow>
+            <TextView
+                style="@style/table_font"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:text="品类:" />
+
+            <Spinner
+                android:id="@+id/product_cata_spinner"
+                style="@style/goods_details_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="" />
+
+            <TextView
+                style="@style/table_font"
+                android:layout_width="0dip"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:text="库存:" />
+
+            <EditText
+                android:id="@+id/product_repertory_num"
+                style="@style/table_edit_text"
+                android:layout_width="0dip"
+                android:layout_height="32dp"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="2"
+                android:text="" />
+        </TableRow>
+        
+        <TextView android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="10dp"
+            style="@style/table_font"
+            android:gravity="center_vertical"
+            android:text="商品描述:" ></TextView>
+        
+        <EditText
+            android:id="@+id/good_details_content"
+            style="@style/goods_details_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:padding="5dp"
+            android:text="" />
+    </TableLayout>
+</LinearLayout>

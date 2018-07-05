@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:background="@drawable/item_bg" >
+
+        <LinearLayout
+            android:layout_width="@dimen/layout_title_margin"
+            android:layout_height="@dimen/layout_title_height" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/layout_title_back_margin_left"
+                android:background="@drawable/back_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="back_onClick"
+                android:text="@string/back"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/title_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/good_details" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="save_onClick"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/table_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/content_padding" >
+
+            <LinearLayout
+                android:id="@+id/photo_linear"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/good"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center_vertical"
+                        android:text="商品照片"
+                        android:textColor="#265ca6"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="camera_onClick" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/back"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="#eeeeee" />
+
+                <com.abt.seller.views.HorizontalListView
+                    android:id="@+id/img_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="5dp" >
+                </com.abt.seller.views.HorizontalListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_relative"
+                android:layout_below="@id/photo_linear" >
+
+                <include layout="@layout/good_details_table" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/btn_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_margin="@dimen/content_margin"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/detail_save"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_margin"
+                    android:background="@drawable/bg_btn1"
+                    android:onClick="save_onClick"
+                    android:padding="@dimen/content_padding"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/detail_btn_font" />
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/content_margin"
+                    android:layout_toRightOf="@id/detail_save"
+                    android:background="@drawable/bg_btn1"
+                    android:onClick="back_onClick"
+                    android:padding="@dimen/content_padding"
+                    android:text="放弃"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/detail_btn_font" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

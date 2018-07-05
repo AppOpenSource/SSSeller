@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/content_margin"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/product_add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/content_margin"
+        android:layout_marginTop="@dimen/content_margin"
+        android:background="@drawable/bg_btn1"
+        android:text="上架"
+        android:onClick="up_onClick"
+        android:textColor="@color/white"
+        android:textSize="@dimen/detail_btn_font" />
+
+    <Button
+        android:id="@+id/product_del"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/content_margin"
+        android:layout_marginLeft="@dimen/content_margin"
+        android:layout_marginTop="@dimen/content_margin"
+        android:background="@drawable/bg_btn1"
+        android:padding="@dimen/content_padding"
+        android:text="下架"
+        android:onClick="down_onClick"
+        android:textColor="@color/white"
+        android:textSize="@dimen/detail_btn_font" />
+
+    <Button
+        android:id="@+id/product_save"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/content_margin"
+        android:layout_marginLeft="@dimen/content_margin"
+        android:layout_marginTop="@dimen/content_margin"
+        android:background="@drawable/bg_btn1"
+        android:padding="@dimen/content_padding"
+        android:text="保存"
+        android:onClick="save_onClick"
+        android:textColor="@color/white"
+        android:textSize="@dimen/detail_btn_font" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/content_margin"
+        android:layout_marginLeft="@dimen/content_margin"
+        android:layout_marginTop="@dimen/content_margin"
+        android:background="@drawable/bg_btn1"
+        android:onClick="back_onClick"
+        android:padding="@dimen/content_padding"
+        android:text="放弃"
+        android:textColor="@color/white"
+        android:textSize="@dimen/detail_btn_font" />
+</LinearLayout>

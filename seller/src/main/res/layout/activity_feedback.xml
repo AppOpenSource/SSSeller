@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/community_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_title_height"
+        android:background="@drawable/item_bg" >
+
+        <LinearLayout
+            android:layout_width="@dimen/layout_title_margin"
+            android:layout_height="@dimen/layout_title_height" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/layout_title_back_margin_left"
+                android:background="@drawable/back_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="back_onClick"
+                android:text="@string/back"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/title_font"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/layout_title_margin"
+            android:text="@string/feedback" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/input_bar_bg" >
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="发送"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/body_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/send_btn"
+            android:ems="10"
+            android:maxHeight="80dp" >
+        </EditText>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_layout"
+        android:layout_below="@+id/title" >
+    </ListView>
+</RelativeLayout>
